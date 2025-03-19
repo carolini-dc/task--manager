@@ -1,0 +1,27 @@
+import { useState } from "react";
+
+function App() {
+  // let message = "Olá mundo";
+
+  const [message, setMessage] = useState("Click");
+  //message é o valor do state
+  //setMnessage é a função que altera o valor do state
+
+  //hook permite que use algumas funcionalidades "especiais" do react
+  //useState é um hook que permite que vc crie estados dentro de um componente funcional
+
+  return (
+    <div>
+      <h1>{message}</h1>
+      <button
+        onClick={() => {
+          setMessage("Olá, Dev!");
+        }}>
+        Mudar mensagem
+      </button>
+    </div>
+  );
+}
+export default App;
+
+//states é uma varivel que quando alterada, vc atualiza o componente/tela
